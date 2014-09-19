@@ -19,6 +19,9 @@ class Select2 extends \yii\widgets\InputWidget {
         } else {
             $this->options['id'] = $this->getId();
         }
+        $this->registerAssetBundle();
+        $this->registerLocate();
+        $this->registerScript();
     }
 
     public function run()
@@ -33,6 +36,7 @@ class Select2 extends \yii\widgets\InputWidget {
     public function registerAssetBundle()
     {
         $this->_assetBundle = Select2Asset::register($this->getView());
+        Select2BootstrapAsset::register($this->getView());
     }
 
     public function registerLocate()

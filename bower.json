@@ -15,6 +15,7 @@
         "/*"
     ],
     "dependencies": {
-        "select2": ">=3.5.1"
+        "select2": ">=3.5.1",
+        "select2-bootstrap-css": ">=1.4.1"
     }
 }
