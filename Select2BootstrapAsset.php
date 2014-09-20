@@ -1,8 +1,8 @@
 <?php
 
 namespace yii\select2;
-
-class Select2BootstrapAsset extends yii\web\AssetBundle {
+use yii\web\AssetBundle;
+class Select2BootstrapAsset extends AssetBundle {
 
     public $sourcePath = '@bower/select2-bootstrap-css';
     public $css = ['select2-bootstrap.css'];
