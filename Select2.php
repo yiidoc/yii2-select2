@@ -5,8 +5,8 @@ namespace yii\select2;
 use yii\helpers\Html;
 use yii\web\AssetBundle;
 use yii\helpers\ArrayHelper;
-
-class Select2 extends \yii\widgets\InputWidget {
+use yii\widgets\InputWidget;
+class Select2 extends InputWidget {
 
     public $items = [];
     public $clientOptions = [];
@@ -43,7 +43,7 @@ class Select2 extends \yii\widgets\InputWidget {
     {
         $locate = ArrayHelper::getValue($this->clientOptions, 'locales', FALSE);
         if ($locate) {
-            $locateAsset = 'select2_locale_' . $locate . '.js';
+            $locateAsset = 'locates/select2_locale_' . $locate . '.js';
             if (file_exists(Yii::getAlias($this->getAssetBundle()->sourcePath . '/' . $locateAsset))) {
                 $this->getAssetBundle()->js[] = $locateAsset;
             } else {
